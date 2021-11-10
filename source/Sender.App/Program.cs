@@ -15,7 +15,7 @@ namespace Sender.App
         private const string connectionString = "";
 
         // name of the event hub
-        private const string eventHubName = "topic01hub";
+        private const string eventHubName = "";
 
         // number of events to be sent to the event hub
         private const int numOfEvents = 2;
@@ -39,7 +39,7 @@ namespace Sender.App
                 //var options = new JsonSerializerOptions { WriteIndented = true };
                 //string jsonString = JsonSerializer.Serialize(data, options);
 
-                CloudEvent cloudEvent = new CloudEvent("eventhubsender.app", "Custom.Event.Created", data)
+                CloudEvent cloudEvent = new CloudEvent("Sender.App", "Custom.Event.Created", data)
                 {
                     Id = Guid.NewGuid().ToString(),
                     Subject = "custom event created",
