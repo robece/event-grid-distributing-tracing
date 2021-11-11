@@ -2,8 +2,6 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <AzureFunctionsVersion>v4</AzureFunctionsVersion>
-    <ApplicationInsightsResourceId>/subscriptions/cf08ad95-25cc-462c-9009-82d1c570f616/resourceGroups/event-grid-01/providers/microsoft.insights/components/topic01func</ApplicationInsightsResourceId>
-    <UserSecretsId>183ab410-2939-46cc-ac2b-f78f5a9a619d</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Azure.Messaging.EventGrid" Version="4.7.0" />

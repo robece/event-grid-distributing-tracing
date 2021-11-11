@@ -14,10 +14,10 @@ using System.Threading.Tasks;
 
 namespace Consumer.Function
 {
-    public static class Consumer
+    public static class InitialConsumer
     {
-        [FunctionName("Consumer")]
-        public static async Task Run([EventHubTrigger("topic01hub", Connection = "EventHubConnectionString")] EventData[] events, ILogger log)
+        [FunctionName("InitialConsumer")]
+        public static async Task Run([EventHubTrigger("", Connection = "EventHubConnectionString", ConsumerGroup = "")] EventData[] events, ILogger log)
         {
             var exceptions = new List<Exception>();
 

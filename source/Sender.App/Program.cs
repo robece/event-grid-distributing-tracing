@@ -18,7 +18,7 @@ namespace Sender.App
         private const string eventHubName = "";
 
         // number of events to be sent to the event hub
-        private const int numOfEvents = 2;
+        private const int numOfEvents = 1;
 
         // The Event Hubs client types are safe to cache and use as a singleton for the lifetime
         // of the application, which is best practice when events are being published or read regularly.
@@ -41,7 +41,7 @@ namespace Sender.App
 
                 CloudEvent cloudEvent = new CloudEvent("Sender.App", "Custom.Event.Created", data)
                 {
-                    Id = Guid.NewGuid().ToString(),
+                    Id = DateTime.Now.ToString(),
                     Subject = "custom event created",
                     DataSchema = "#"
                 };
